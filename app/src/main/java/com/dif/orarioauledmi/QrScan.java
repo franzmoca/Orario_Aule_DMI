@@ -1,9 +1,12 @@
 package com.dif.orarioauledmi;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class QrScan extends Activity {
@@ -13,6 +16,15 @@ public class QrScan extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr_scan);
     }
+     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+           IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+           if (scanResult != null) {
+                 // handle scan result
+               Log.d("QrScan",""+scanResult);
+               }
+           // else continue with any other code you need in the method
+
+         }
 
 
     @Override
@@ -32,5 +44,13 @@ public class QrScan extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void leggiQR(View view) {
+        IntentIntegrator integrator = new IntentIntegrator(this);
+        integrator.addExtra("SCAN_FORMATS", "QR_CODE_MODE");
+        integrator.addExtra("SAVE_HISTORY", true);
+        integrator.initiateScan();
     }
 }

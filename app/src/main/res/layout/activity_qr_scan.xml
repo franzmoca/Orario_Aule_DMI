@@ -9,8 +9,20 @@
     tools:context=".QrScan">
 
     <TextView
-        android:text="@string/hello_world"
+        android:text="Scan QR"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan"
+        android:id="@+id/button"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="leggiQR"/>
 
 </RelativeLayout>

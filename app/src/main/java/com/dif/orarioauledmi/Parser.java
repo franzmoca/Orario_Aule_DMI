@@ -1,36 +1,24 @@
 package com.dif.orarioauledmi;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import com.dif.orarioauledmi.R;
 
-
-public class QrScan extends Activity {
+public class Parser extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_qr_scan);
+        setContentView(R.layout.activity_parser);
     }
-     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-           IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
-           if (scanResult != null) {
-                 // handle scan result
-               Log.d("QrScan",""+scanResult);
-               }
-           // else continue with any other code you need in the method
-
-         }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.qr_scan, menu);
+        getMenuInflater().inflate(R.menu.parser, menu);
         return true;
     }
 
@@ -44,12 +32,5 @@ public class QrScan extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-
-    public void leggiQR(View view) {
-        IntentIntegrator integrator = new IntentIntegrator(this);
-        integrator.addExtra("SAVE_HISTORY", false);
-        integrator.initiateScan(IntentIntegrator.QR_CODE_TYPES);
     }
 }

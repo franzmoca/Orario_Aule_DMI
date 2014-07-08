@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView">
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:id="@+id/piano">
+    android:id="@+id/piano"
+    android:gravity="center">
 
     <TextView android:layout_width="fill_parent"
         android:text="Aula"
@@ -22,7 +28,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/ora1"
             android:textSize="22sp"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
 
         <TextView android:layout_width="wrap_content"
             android:text="Lezione"
@@ -31,7 +38,8 @@
             android:textSize="20sp"
             android:layout_marginLeft="110dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:gravity="center" />
 
         <TextView android:layout_width="fill_parent"
             android:text="Professore"
@@ -40,7 +48,8 @@
             android:textSize="14sp"
             android:layout_below="@id/ora1"
             android:layout_alignParentBottom="false"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
     </RelativeLayout>
 
 
@@ -55,7 +64,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/ora2"
             android:textSize="22sp"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
 
         <TextView android:layout_width="wrap_content"
             android:text="Lezione"
@@ -64,7 +74,8 @@
             android:textSize="20sp"
             android:layout_marginLeft="110dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:gravity="center" />
 
         <TextView android:layout_width="fill_parent"
             android:text="Professore"
@@ -73,7 +84,8 @@
             android:textSize="14sp"
             android:layout_below="@id/ora2"
             android:layout_alignParentBottom="false"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -87,7 +99,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/ora3"
             android:textSize="22sp"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
 
         <TextView android:layout_width="wrap_content"
             android:text="Lezione"
@@ -96,7 +109,8 @@
             android:textSize="20sp"
             android:layout_marginLeft="110dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:gravity="center" />
 
         <TextView android:layout_width="fill_parent"
             android:text="Professore"
@@ -105,7 +119,8 @@
             android:textSize="14sp"
             android:layout_below="@id/ora3"
             android:layout_alignParentBottom="false"
-            android:layout_marginRight="250dp" />
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -119,7 +134,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/ora4"
             android:textSize="22sp"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
 
         <TextView android:layout_width="wrap_content"
             android:text="Lezione"
@@ -128,7 +144,8 @@
             android:textSize="20sp"
             android:layout_marginLeft="110dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:gravity="center" />
 
         <TextView android:layout_width="fill_parent"
             android:text="Professore"
@@ -137,7 +154,8 @@
             android:textSize="14sp"
             android:layout_below="@id/ora4"
             android:layout_alignParentBottom="false"
-            android:layout_marginRight="250dp" />
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -151,7 +169,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/ora5"
             android:textSize="22sp"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
 
         <TextView android:layout_width="wrap_content"
             android:text="Lezione"
@@ -160,7 +179,8 @@
             android:textSize="20sp"
             android:layout_marginLeft="110dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:gravity="center" />
 
         <TextView android:layout_width="fill_parent"
             android:text="Professore"
@@ -169,21 +189,24 @@
             android:textSize="14sp"
             android:layout_below="@id/ora5"
             android:layout_alignParentBottom="false"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/sesto"
         android:layout_below="@+id/quinto"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center">
 
         <TextView android:layout_width="fill_parent"
             android:text="Orario"
             android:layout_height="wrap_content"
             android:id="@+id/ora6"
             android:textSize="22sp"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
 
         <TextView android:layout_width="wrap_content"
             android:text="Lezione"
@@ -192,7 +215,8 @@
             android:textSize="20sp"
             android:layout_marginLeft="110dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:gravity="center" />
 
         <TextView android:layout_width="fill_parent"
             android:text="Professore"
@@ -201,7 +225,8 @@
             android:textSize="14sp"
             android:layout_below="@id/ora6"
             android:layout_alignParentBottom="false"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -215,7 +240,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/ora7"
             android:textSize="22sp"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
 
         <TextView android:layout_width="wrap_content"
             android:text="Lezione"
@@ -224,7 +250,8 @@
             android:textSize="20sp"
             android:layout_marginLeft="110dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:gravity="center" />
 
         <TextView android:layout_width="fill_parent"
             android:text="Professore"
@@ -233,7 +260,8 @@
             android:textSize="14sp"
             android:layout_below="@id/ora7"
             android:layout_alignParentBottom="false"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -247,7 +275,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/ora8"
             android:textSize="22sp"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
 
         <TextView android:layout_width="wrap_content"
             android:text="Lezione"
@@ -256,7 +285,8 @@
             android:textSize="20sp"
             android:layout_marginLeft="110dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:gravity="center" />
 
         <TextView android:layout_width="fill_parent"
             android:text="Professore"
@@ -265,7 +295,8 @@
             android:textSize="14sp"
             android:layout_below="@id/ora8"
             android:layout_alignParentBottom="false"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -279,7 +310,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/ora9"
             android:textSize="22sp"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
 
         <TextView android:layout_width="wrap_content"
             android:text="Lezione"
@@ -288,7 +320,8 @@
             android:textSize="20sp"
             android:layout_marginLeft="110dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:gravity="center" />
 
         <TextView android:layout_width="fill_parent"
             android:text="Professore"
@@ -297,7 +330,8 @@
             android:textSize="14sp"
             android:layout_below="@id/ora9"
             android:layout_alignParentBottom="false"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -311,7 +345,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/ora10"
             android:textSize="22sp"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
 
         <TextView android:layout_width="wrap_content"
             android:text="Lezione"
@@ -320,7 +355,8 @@
             android:textSize="20sp"
             android:layout_marginLeft="110dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:gravity="center" />
 
         <TextView android:layout_width="fill_parent"
             android:text="Professore"
@@ -329,7 +365,8 @@
             android:textSize="14sp"
             android:layout_below="@id/ora10"
             android:layout_alignParentBottom="false"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
     </RelativeLayout>
 
 
@@ -337,14 +374,16 @@
         android:id="@+id/undicesimo"
         android:layout_below="@+id/decimo"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center">
 
         <TextView android:layout_width="fill_parent"
             android:text="Orario"
             android:layout_height="wrap_content"
             android:id="@+id/ora11"
             android:textSize="22sp"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
 
         <TextView android:layout_width="wrap_content"
             android:text="Lezione"
@@ -353,7 +392,8 @@
             android:textSize="20sp"
             android:layout_marginLeft="110dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:gravity="center" />
 
         <TextView android:layout_width="fill_parent"
             android:text="Professore"
@@ -362,8 +402,12 @@
             android:textSize="14sp"
             android:layout_below="@id/ora11"
             android:layout_alignParentBottom="false"
-            android:layout_marginRight="250dp"/>
+            android:layout_marginRight="250dp"
+            android:gravity="center" />
     </RelativeLayout>
 
 
+
 </RelativeLayout>
+
+</ScrollView>

@@ -10,6 +10,7 @@ import android.view.View;
 
 
 public class QrScan extends Activity {
+    public final static String QRCODE = "com.dif.orarioauledmi.qrcode";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,9 @@ public class QrScan extends Activity {
            if (scanResult != null) {
                  // handle scan result
                Log.d("QrScan",""+scanResult);
+               Intent qrcode = new Intent(QrScan.this,Orario.class);
+               qrcode.putExtra(QRCODE,scanResult.getContents());
+               QrScan.this.startActivity(qrcode);
                }
            // else continue with any other code you need in the method
 

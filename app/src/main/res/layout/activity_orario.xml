@@ -15,19 +15,22 @@
         android:layout_height="wrap_content"
         android:id="@+id/aula"
         android:textSize="30sp"
-        android:gravity="center" />
+        android:gravity="center"
+        android:background="#9CFFFF"/>
 
     <RelativeLayout
         android:id="@+id/primo"
         android:layout_below="@+id/aula"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#3578FF">
 
         <TextView android:layout_width="fill_parent"
             android:text="Orario"
             android:layout_height="wrap_content"
             android:id="@+id/ora1"
             android:textSize="22sp"
+            android:textColor="#fff"
             android:layout_marginRight="250dp"
             android:gravity="center" />
 
@@ -39,7 +42,8 @@
             android:layout_marginLeft="110dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
-            android:gravity="center" />
+            android:gravity="center"
+            android:textColor="#fff"/>
 
         <TextView android:layout_width="fill_parent"
             android:text="Professore"
@@ -49,7 +53,8 @@
             android:layout_below="@id/ora1"
             android:layout_alignParentBottom="false"
             android:layout_marginRight="250dp"
-            android:gravity="center" />
+            android:gravity="center"
+            android:textColor="#fff"/>
     </RelativeLayout>
 
 
@@ -57,7 +62,8 @@
         android:id="@+id/secondo"
         android:layout_below="@+id/primo"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#BCEAFF">
 
         <TextView android:layout_width="fill_parent"
             android:text="Orario"
@@ -127,7 +133,8 @@
         android:id="@+id/quarto"
         android:layout_below="@+id/terzo"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#BCEAFF">
 
         <TextView android:layout_width="fill_parent"
             android:text="Orario"
@@ -198,7 +205,8 @@
         android:layout_below="@+id/quinto"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center">
+        android:gravity="center"
+        android:background="#BCEAFF">
 
         <TextView android:layout_width="fill_parent"
             android:text="Orario"
@@ -268,7 +276,8 @@
         android:id="@+id/ottavo"
         android:layout_below="@+id/settimo"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#BCEAFF">
 
         <TextView android:layout_width="fill_parent"
             android:text="Orario"
@@ -338,7 +347,8 @@
         android:id="@+id/decimo"
         android:layout_below="@+id/nono"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#BCEAFF">
 
         <TextView android:layout_width="fill_parent"
             android:text="Orario"

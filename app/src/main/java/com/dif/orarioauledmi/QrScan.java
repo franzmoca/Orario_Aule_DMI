@@ -2,6 +2,7 @@ package com.dif.orarioauledmi;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -15,6 +16,7 @@ public class QrScan extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); //Forza la portrait mode
         setContentView(R.layout.activity_qr_scan);
     }
      public void onActivityResult(int requestCode, int resultCode, Intent intent) {

@@ -1,9 +1,12 @@
 package com.dif.orarioauledmi;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
 import com.dif.orarioauledmi.R;
 
 public class Orario extends Activity {
@@ -12,7 +15,10 @@ public class Orario extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_orario);
-
+        Intent intent = getIntent();
+        String d =intent.getStringExtra(QrScan.QRCODE);
+        TextView aula = (TextView) findViewById(R.id.aula);
+        aula.setText(d);
     }
 
 

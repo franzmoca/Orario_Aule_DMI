@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:id="@+id/primo">
+    android:id="@+id/piano">
+
     <TextView android:layout_width="fill_parent"
         android:text="Aula"
         android:layout_height="wrap_content"
@@ -11,40 +12,8 @@
         android:gravity="center" />
 
     <RelativeLayout
-        android:id="@+id/secondo"
+        android:id="@+id/primo"
         android:layout_below="@+id/aula"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-
-        <TextView android:layout_width="fill_parent"
-            android:text="Orario"
-            android:layout_height="wrap_content"
-            android:id="@+id/ora"
-            android:textSize="22sp"
-            android:layout_marginRight="250dp"/>
-
-        <TextView android:layout_width="wrap_content"
-            android:text="Lezione"
-            android:layout_height="wrap_content"
-            android:id="@+id/lezione"
-            android:textSize="20sp"
-            android:layout_marginLeft="110dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true" />
-
-        <TextView android:layout_width="fill_parent"
-            android:text="Professore"
-            android:layout_height="wrap_content"
-            android:id="@+id/prof"
-            android:textSize="14sp"
-            android:layout_below="@id/ora"
-            android:layout_alignParentBottom="false"
-            android:layout_marginRight="250dp"/>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/terzo"
-        android:layout_below="@+id/secondo"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
@@ -71,12 +40,13 @@
             android:textSize="14sp"
             android:layout_below="@id/ora1"
             android:layout_alignParentBottom="false"
-            android:layout_marginRight="250dp" />
+            android:layout_marginRight="250dp"/>
     </RelativeLayout>
 
+
     <RelativeLayout
-        android:id="@+id/quarto"
-        android:layout_below="@+id/terzo"
+        android:id="@+id/secondo"
+        android:layout_below="@+id/primo"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
@@ -103,17 +73,297 @@
             android:textSize="14sp"
             android:layout_below="@id/ora2"
             android:layout_alignParentBottom="false"
+            android:layout_marginRight="250dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/terzo"
+        android:layout_below="@+id/secondo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:layout_width="fill_parent"
+            android:text="Orario"
+            android:layout_height="wrap_content"
+            android:id="@+id/ora3"
+            android:textSize="22sp"
+            android:layout_marginRight="250dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:text="Lezione"
+            android:layout_height="wrap_content"
+            android:id="@+id/lezione3"
+            android:textSize="20sp"
+            android:layout_marginLeft="110dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView android:layout_width="fill_parent"
+            android:text="Professore"
+            android:layout_height="wrap_content"
+            android:id="@+id/prof3"
+            android:textSize="14sp"
+            android:layout_below="@id/ora3"
+            android:layout_alignParentBottom="false"
             android:layout_marginRight="250dp" />
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/quarto"
+        android:layout_below="@+id/terzo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:layout_width="fill_parent"
+            android:text="Orario"
+            android:layout_height="wrap_content"
+            android:id="@+id/ora4"
+            android:textSize="22sp"
+            android:layout_marginRight="250dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:text="Lezione"
+            android:layout_height="wrap_content"
+            android:id="@+id/lezione4"
+            android:textSize="20sp"
+            android:layout_marginLeft="110dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView android:layout_width="fill_parent"
+            android:text="Professore"
+            android:layout_height="wrap_content"
+            android:id="@+id/prof4"
+            android:textSize="14sp"
+            android:layout_below="@id/ora4"
+            android:layout_alignParentBottom="false"
+            android:layout_marginRight="250dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/quinto"
+        android:layout_below="@+id/quarto"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:layout_width="fill_parent"
+            android:text="Orario"
+            android:layout_height="wrap_content"
+            android:id="@+id/ora5"
+            android:textSize="22sp"
+            android:layout_marginRight="250dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:text="Lezione"
+            android:layout_height="wrap_content"
+            android:id="@+id/lezione5"
+            android:textSize="20sp"
+            android:layout_marginLeft="110dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView android:layout_width="fill_parent"
+            android:text="Professore"
+            android:layout_height="wrap_content"
+            android:id="@+id/prof5"
+            android:textSize="14sp"
+            android:layout_below="@id/ora5"
+            android:layout_alignParentBottom="false"
+            android:layout_marginRight="250dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sesto"
+        android:layout_below="@+id/quinto"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:layout_width="fill_parent"
+            android:text="Orario"
+            android:layout_height="wrap_content"
+            android:id="@+id/ora6"
+            android:textSize="22sp"
+            android:layout_marginRight="250dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:text="Lezione"
+            android:layout_height="wrap_content"
+            android:id="@+id/lezione6"
+            android:textSize="20sp"
+            android:layout_marginLeft="110dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView android:layout_width="fill_parent"
+            android:text="Professore"
+            android:layout_height="wrap_content"
+            android:id="@+id/prof6"
+            android:textSize="14sp"
+            android:layout_below="@id/ora6"
+            android:layout_alignParentBottom="false"
+            android:layout_marginRight="250dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/settimo"
+        android:layout_below="@+id/sesto"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:layout_width="fill_parent"
+            android:text="Orario"
+            android:layout_height="wrap_content"
+            android:id="@+id/ora7"
+            android:textSize="22sp"
+            android:layout_marginRight="250dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:text="Lezione"
+            android:layout_height="wrap_content"
+            android:id="@+id/lezione7"
+            android:textSize="20sp"
+            android:layout_marginLeft="110dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView android:layout_width="fill_parent"
+            android:text="Professore"
+            android:layout_height="wrap_content"
+            android:id="@+id/prof7"
+            android:textSize="14sp"
+            android:layout_below="@id/ora7"
+            android:layout_alignParentBottom="false"
+            android:layout_marginRight="250dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ottavo"
+        android:layout_below="@+id/settimo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:layout_width="fill_parent"
+            android:text="Orario"
+            android:layout_height="wrap_content"
+            android:id="@+id/ora8"
+            android:textSize="22sp"
+            android:layout_marginRight="250dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:text="Lezione"
+            android:layout_height="wrap_content"
+            android:id="@+id/lezione8"
+            android:textSize="20sp"
+            android:layout_marginLeft="110dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView android:layout_width="fill_parent"
+            android:text="Professore"
+            android:layout_height="wrap_content"
+            android:id="@+id/prof8"
+            android:textSize="14sp"
+            android:layout_below="@id/ora8"
+            android:layout_alignParentBottom="false"
+            android:layout_marginRight="250dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nono"
+        android:layout_below="@+id/ottavo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:layout_width="fill_parent"
+            android:text="Orario"
+            android:layout_height="wrap_content"
+            android:id="@+id/ora9"
+            android:textSize="22sp"
+            android:layout_marginRight="250dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:text="Lezione"
+            android:layout_height="wrap_content"
+            android:id="@+id/lezione9"
+            android:textSize="20sp"
+            android:layout_marginLeft="110dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView android:layout_width="fill_parent"
+            android:text="Professore"
+            android:layout_height="wrap_content"
+            android:id="@+id/prof9"
+            android:textSize="14sp"
+            android:layout_below="@id/ora9"
+            android:layout_alignParentBottom="false"
+            android:layout_marginRight="250dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/decimo"
+        android:layout_below="@+id/nono"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:layout_width="fill_parent"
+            android:text="Orario"
+            android:layout_height="wrap_content"
+            android:id="@+id/ora10"
+            android:textSize="22sp"
+            android:layout_marginRight="250dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:text="Lezione"
+            android:layout_height="wrap_content"
+            android:id="@+id/lezione10"
+            android:textSize="20sp"
+            android:layout_marginLeft="110dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView android:layout_width="fill_parent"
+            android:text="Professore"
+            android:layout_height="wrap_content"
+            android:id="@+id/prof10"
+            android:textSize="14sp"
+            android:layout_below="@id/ora10"
+            android:layout_alignParentBottom="false"
+            android:layout_marginRight="250dp"/>
+    </RelativeLayout>
 
 
+    <RelativeLayout
+        android:id="@+id/undicesimo"
+        android:layout_below="@+id/decimo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
+        <TextView android:layout_width="fill_parent"
+            android:text="Orario"
+            android:layout_height="wrap_content"
+            android:id="@+id/ora11"
+            android:textSize="22sp"
+            android:layout_marginRight="250dp"/>
 
+        <TextView android:layout_width="wrap_content"
+            android:text="Lezione"
+            android:layout_height="wrap_content"
+            android:id="@+id/lezione11"
+            android:textSize="20sp"
+            android:layout_marginLeft="110dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true" />
 
-
-
-
+        <TextView android:layout_width="fill_parent"
+            android:text="Professore"
+            android:layout_height="wrap_content"
+            android:id="@+id/prof11"
+            android:textSize="14sp"
+            android:layout_below="@id/ora11"
+            android:layout_alignParentBottom="false"
+            android:layout_marginRight="250dp"/>
+    </RelativeLayout>
 
 
 </RelativeLayout>

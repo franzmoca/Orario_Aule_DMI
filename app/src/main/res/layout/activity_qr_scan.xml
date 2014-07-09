@@ -25,4 +25,16 @@
         android:layout_centerHorizontal="true"
         android:onClick="leggiQR"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button3"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:clickable="true"
+        android:onClick="goAula" />
+
+
 </RelativeLayout>

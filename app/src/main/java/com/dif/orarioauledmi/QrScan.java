@@ -58,4 +58,12 @@ public class QrScan extends Activity {
         integrator.addExtra("SAVE_HISTORY", false);
         integrator.initiateScan(IntentIntegrator.QR_CODE_TYPES);
     }
+
+
+    public void goAula(View view){
+        Intent intent=new Intent(QrScan.this,Orario.class);
+        startActivity(intent);
+    }
+
 }
+

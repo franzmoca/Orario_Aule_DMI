@@ -1,6 +1,8 @@
 package com.dif.orarioauledmi;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -14,12 +16,19 @@ import android.widget.TextView;
 
 import com.dif.orarioauledmi.R;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Calendar;
 
-import static com.dif.orarioauledmi.Parser.getJSONFromHttpPost;
 
 public class Orario extends Activity {
     TextView aula;
@@ -34,16 +43,30 @@ public class Orario extends Activity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); //Forza la portrait mode
         setContentView(R.layout.activity_orario);
         Calendar rightNow = Calendar.getInstance();
-        int f = rightNow.get(Calendar.HOUR_OF_DAY) - 10;
+        int iora = rightNow.get(Calendar.HOUR_OF_DAY);
+        Log.d("ioraprima: ",""+iora);
+
+        //Orari
+        if(iora > 8 && iora < 19) {
+            if(iora>13){
+                iora-=10;
+            }else {
+                iora -= 9;
+            }
+        }else{
+            iora=0;
+        }
+        Log.d("ioradopo: ",""+iora);
         aula = (TextView) findViewById(R.id.aula);
         Intent intent = getIntent();
-        String d =intent.getStringExtra(QrScan.QRCODE);
+        String d ="http://esameingsoft.altervista.org/php/android/echo_json.php?q="+intent.getStringExtra(QrScan.QRCODE);
+        Log.d("d",""+d);
 
         JSONObject json = getJSONFromHttpPost(d);
         try {
             int a = 0;
             aula.setText(""+json.get("aula"));
-            for(int i = f; i<8;i++){
+            for(int i = iora; i<8;i++){
                 TextView orario =(TextView) findViewById(idora[a]);
                 orario.setText(""+orari[i]);
                 TextView lezione = (TextView) findViewById(idlezione[a]);
@@ -54,7 +77,7 @@ public class Orario extends Activity {
                 RelativeLayout riga = (RelativeLayout) findViewById(idRelative[b]);
                 riga.setVisibility(View.INVISIBLE);
             }
-        } catch (JSONException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -78,5 +101,93 @@ public class Orario extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    public  void  qrErrato(){
+        // 1. Instantiate an AlertDialog.Builder with its constructor
+        AlertDialog.Builder builder = new AlertDialog.Builder(Orario.this);
+
+        // 2. Chain together various setter methods to set the dialog characteristics
+        builder.setMessage("Il QR letto non è corrispondente ad un aula")
+                .setTitle("Errore!");
+
+        builder.setPositiveButton("Riprova",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                }
+        );
+        // 3. Get the AlertDialog from create()
+        AlertDialog dialog = builder.create();
+
+        dialog.show();
+    }
+
+    public JSONObject getJSONFromHttpPost(String URL) {
+        StrictMode.ThreadPolicy policy = new
+                StrictMode.ThreadPolicy.Builder()
+                .permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+        try {
+            // Create a new HttpClient and Post Header
+            DefaultHttpClient httpclient = new DefaultHttpClient();
+            HttpPost httpPost = new HttpPost(URL);
+            String resultString = null;
+
+
+            long t = System.currentTimeMillis();
+            HttpResponse response = (HttpResponse) httpclient.execute(httpPost);
+            System.out.println("HTTPResponse received in [" + (System.currentTimeMillis() - t) + "ms]");
+            // Get hold of the response entity (-> the data):
+            HttpEntity entity = response.getEntity();
+
+            if (entity != null) {
+                // Read the content stream
+                InputStream instream = entity.getContent();
+
+                // convert content stream to a String
+                resultString = convertStreamToString(instream);
+                instream.close();
+                System.out.println("result String : " + resultString);
+                //resultString = resultString.substring(1,resultString.length()-1); // remove wrapping "[" and "]"
+                if(resultString=="QrCode errato"){
+                 qrErrato();
+                }
+                // Transform the String into a JSONObject
+                JSONObject jsonObjRecv = new JSONObject(resultString);
+                // Raw DEBUG output of our received JSON object:
+                System.out.println("<JSONObject>\n" + jsonObjRecv.toString() + "\n</JSONObject>");
+
+
+                return jsonObjRecv;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+
+    }
+
+    private static String convertStreamToString(InputStream is) {
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+        StringBuilder sb = new StringBuilder();
+
+        String line ="";
+        try {
+            while ((line = reader.readLine()) != null) {
+                sb.append(line + "\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                is.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return sb.toString();
     }
 }

@@ -27,6 +27,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.UnknownHostException;
 import java.util.Calendar;
 
 
@@ -59,7 +60,9 @@ public class Orario extends Activity {
         Log.d("ioradopo: ",""+iora);
         aula = (TextView) findViewById(R.id.aula);
         Intent intent = getIntent();
-        String d ="http://esameingsoft.altervista.org/php/android/echo_json.php?q="+intent.getStringExtra(QrScan.QRCODE);
+        String query = intent.getStringExtra(QrScan.QRCODE);
+        query.replaceAll(" ","%20");
+        String d ="http://esameingsoft.altervista.org/php/android/echo_json.php?q="+ query;
         Log.d("d",""+d);
 
         JSONObject json = getJSONFromHttpPost(d);
@@ -77,7 +80,7 @@ public class Orario extends Activity {
                 RelativeLayout riga = (RelativeLayout) findViewById(idRelative[b]);
                 riga.setVisibility(View.INVISIBLE);
             }
-        } catch (Exception e) {
+        }catch (Exception e){
             e.printStackTrace();
         }
 
@@ -102,13 +105,24 @@ public class Orario extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
-    public  void  qrErrato(){
+    public  void  qrErrato(int errore){
+        //0 : Qr letto non valido
+        //1: Connessione assente
         // 1. Instantiate an AlertDialog.Builder with its constructor
         AlertDialog.Builder builder = new AlertDialog.Builder(Orario.this);
 
         // 2. Chain together various setter methods to set the dialog characteristics
-        builder.setMessage("Il QR letto non è corrispondente ad un aula")
-                .setTitle("Errore!");
+        switch (errore){
+            case 0:
+                builder.setMessage("Il QR letto non è corrispondente ad un aula")
+                        .setTitle("Errore!");
+                break;
+            case 1:
+                builder.setMessage("Connessione a internet assente")
+                        .setTitle("Errore!");
+
+        }
+
 
         builder.setPositiveButton("Riprova",
                 new DialogInterface.OnClickListener() {
@@ -120,7 +134,11 @@ public class Orario extends Activity {
         );
         // 3. Get the AlertDialog from create()
         AlertDialog dialog = builder.create();
-
+        aula.setText("Aula sconosciuta");
+        for(int b = 0; b < 11; b++){
+            RelativeLayout riga = (RelativeLayout) findViewById(idRelative[b]);
+            riga.setVisibility(View.INVISIBLE);
+        }
         dialog.show();
     }
 
@@ -151,8 +169,9 @@ public class Orario extends Activity {
                 instream.close();
                 System.out.println("result String : " + resultString);
                 //resultString = resultString.substring(1,resultString.length()-1); // remove wrapping "[" and "]"
-                if(resultString=="QrCode errato"){
-                 qrErrato();
+                if(resultString.contains("QrCode errato")){
+                 qrErrato(0);
+                 return null;
                 }
                 // Transform the String into a JSONObject
                 JSONObject jsonObjRecv = new JSONObject(resultString);
@@ -162,6 +181,8 @@ public class Orario extends Activity {
 
                 return jsonObjRecv;
             }
+        }catch (UnknownHostException e){
+            qrErrato(1);
         } catch (Exception e) {
             e.printStackTrace();
         }

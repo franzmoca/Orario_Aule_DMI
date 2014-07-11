@@ -211,4 +211,10 @@ public class Orario extends Activity {
         }
         return sb.toString();
     }
+
+
+
+    public void indietro(View view){
+        finish();
+    }
 }

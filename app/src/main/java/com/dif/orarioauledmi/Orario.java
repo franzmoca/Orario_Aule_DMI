@@ -227,33 +227,33 @@ public class Orario extends Activity {
             return R.drawable.a0;
         }
         if(aula.contains("A2")){
-            return R.drawable.a0;
+            return R.drawable.ingresso;
         }
         if(aula.contains("A3")){
-            return R.drawable.a0;
+            return R.drawable.ingresso;
         }
         if(aula.contains("B1")){
-            return R.drawable.a0;
+            return R.drawable.ingresso;
         }
         if(aula.contains("B3")){
-            return R.drawable.a0;
+            return R.drawable.ingresso;
         }
         if(aula.contains("C2")){
-            return R.drawable.a0;
+            return R.drawable.ingresso;
         }
         if(aula.contains("I1")){
-            return R.drawable.a0;
+            return R.drawable.ingresso;
         }
         if(aula.contains("I2")){
-            return R.drawable.a0;
+            return R.drawable.ingresso;
         }
         if(aula.contains("lab GIALLA")){
-            return R.drawable.a0;
+            return R.drawable.ingresso;
         }
         if(aula.contains("lab VERDE")){
-            return R.drawable.a0;
+            return R.drawable.ingresso;
         }
-        return R.drawable.a0;
+        return R.drawable.ingresso;
     }
 
     public void indietro(View view){

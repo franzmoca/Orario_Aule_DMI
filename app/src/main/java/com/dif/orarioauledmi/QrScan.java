@@ -60,10 +60,6 @@ public class QrScan extends Activity {
     }
 
 
-    public void goAula(View view){
-        Intent intent=new Intent(QrScan.this,Orario.class);
-        startActivity(intent);
-    }
 
 }
 

@@ -67,8 +67,11 @@ public class Orario extends Activity {
 
         JSONObject json = getJSONFromHttpPost(d);
         try {
+            String nomeaula= ""+json.get("aula");
             int a = 0;
-            aula.setText(""+json.get("aula"));
+            aula.setText(nomeaula);
+            RelativeLayout sfondo= (RelativeLayout)findViewById(R.id.sfondo);
+            setViewBackgroundWithoutResettingPadding(sfondo,trueAula(nomeaula));
             for(int i = iora; i<8;i++){
                 TextView orario =(TextView) findViewById(idora[a]);
                 orario.setText(""+orari[i]);
@@ -212,7 +215,46 @@ public class Orario extends Activity {
         return sb.toString();
     }
 
+    public static void setViewBackgroundWithoutResettingPadding(final View v, final int backgroundResId) {
+        final int paddingBottom = v.getPaddingBottom(), paddingLeft = v.getPaddingLeft();
+        final int paddingRight = v.getPaddingRight(), paddingTop = v.getPaddingTop();
+        v.setBackgroundResource(backgroundResId);
+        v.setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom);
+    }
 
+    public int trueAula(String aula){
+        if(aula.contains("A0")){
+            return R.drawable.a0;
+        }
+        if(aula.contains("A2")){
+            return R.drawable.a0;
+        }
+        if(aula.contains("A3")){
+            return R.drawable.a0;
+        }
+        if(aula.contains("B1")){
+            return R.drawable.a0;
+        }
+        if(aula.contains("B3")){
+            return R.drawable.a0;
+        }
+        if(aula.contains("C2")){
+            return R.drawable.a0;
+        }
+        if(aula.contains("I1")){
+            return R.drawable.a0;
+        }
+        if(aula.contains("I2")){
+            return R.drawable.a0;
+        }
+        if(aula.contains("lab GIALLA")){
+            return R.drawable.a0;
+        }
+        if(aula.contains("lab VERDE")){
+            return R.drawable.a0;
+        }
+        return R.drawable.a0;
+    }
 
     public void indietro(View view){
         finish();

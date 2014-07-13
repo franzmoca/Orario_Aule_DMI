@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/cals"
+    <item android:drawable="@drawable/calendars"
         android:state_pressed="true" />
-    <item android:drawable="@drawable/cals"
+    <item android:drawable="@drawable/calendars"
         android:state_focused="true" />
-    <item android:drawable="@drawable/cal" />
+    <item android:drawable="@drawable/calendar" />
 </selector>

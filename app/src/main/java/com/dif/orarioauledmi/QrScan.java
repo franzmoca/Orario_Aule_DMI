@@ -59,6 +59,10 @@ public class QrScan extends Activity {
         integrator.initiateScan(IntentIntegrator.QR_CODE_TYPES);
     }
 
+    public void Esci(View view){
+        finish();
+    }
+
 
 
 }

@@ -7,15 +7,43 @@
     tools:context=".QrScan"
     android:background="@drawable/home">
 
-    <Button
-        android:layout_width="96dp"
-        android:layout_height="135dp"
-        android:id="@+id/button"
-        android:onClick="leggiQR"
-        android:background="@drawable/camerax"
-        android:layout_marginBottom="57dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
 
+    <Button
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:id="@+id/button5"
+        android:background="@drawable/calendariox"
+        android:layout_weight="0.36"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:id="@+id/button6"
+        android:background="@drawable/esci"
+        android:layout_weight="0.36"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="Esci" />
+
+    <Button
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:id="@+id/button3"
+        android:background="@drawable/impostazioni"
+        android:layout_weight="0.36"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:id="@+id/button7"
+        android:background="@drawable/camerax"
+        android:layout_above="@+id/button6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="62dp"
+        android:onClick="leggiQR" />
 
 </RelativeLayout>

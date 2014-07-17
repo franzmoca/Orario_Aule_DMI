@@ -21,7 +21,7 @@ public class QrScan extends Activity {
     }
      public void onActivityResult(int requestCode, int resultCode, Intent intent) {
            IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
-           if (scanResult != null) {
+           if (scanResult != null && scanResult.getContents()!=null) {
                  // handle scan result
                Log.d("QrScan",""+scanResult);
                Intent qrcode = new Intent(QrScan.this,Orario.class);

@@ -14,18 +14,21 @@
         android:id="@+id/button5"
         android:background="@drawable/calendariox"
         android:layout_weight="0.36"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignTop="@+id/button6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp" />
 
     <Button
         android:layout_width="72dp"
-        android:layout_height="72dp"
+        android:layout_height="75dp"
         android:id="@+id/button6"
         android:background="@drawable/esci"
         android:layout_weight="0.36"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="Esci" />
+        android:onClick="Esci"
+        android:layout_marginTop="452dp"
+        android:layout_alignParentTop="true" />
 
     <Button
         android:layout_width="72dp"
@@ -33,17 +36,26 @@
         android:id="@+id/button3"
         android:background="@drawable/impostazioni"
         android:layout_weight="0.36"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true" />
+        android:paddingRight="5dp"
+        android:layout_alignTop="@+id/button6"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="26dp"
+        android:layout_toRightOf="@+id/button7"
+        android:layout_marginLeft="41dp"
+        android:layout_alignBottom="@+id/button6"
+        android:onClick="info" />
 
     <Button
         android:layout_width="144dp"
         android:layout_height="144dp"
         android:id="@+id/button7"
         android:background="@drawable/camerax"
-        android:layout_above="@+id/button6"
+        android:layout_marginBottom="29dp"
+        android:onClick="leggiQR"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="62dp"
-        android:onClick="leggiQR" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="242dp"
+        android:layout_above="@+id/button5" />
 
 </RelativeLayout>

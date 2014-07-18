@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/unipg" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingegneria del Software\nProgetto 1b\n\n\nRealizzato da:\n\nIvan Mercanti\nFrancesco Moca\nDan Rusnac"
+        android:id="@+id/textView"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:layout_gravity="bottom" />
+
+
+
+
+
+</LinearLayout>

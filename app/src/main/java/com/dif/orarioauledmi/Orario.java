@@ -226,7 +226,7 @@ public class Orario extends Activity {
             return R.drawable.a0;
         }
         if(aula.contains("A2")){
-            return R.drawable.ingresso;
+            return R.drawable.a2;
         }
         if(aula.contains("A3")){
             return R.drawable.ingresso;

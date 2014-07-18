@@ -22,6 +22,9 @@
             android:name=".Orario"
             android:label="@string/title_activity_orario" >
         </activity>
+        <activity
+            android:name=".Info">
+        </activity>
     </application>
 
 </manifest>

@@ -63,7 +63,11 @@ public class QrScan extends Activity {
         finish();
     }
 
+    public void info (View view){
+        Intent intent =new Intent(QrScan.this, Info.class);
+        QrScan.this.startActivity(intent);
 
+    }
 
 }
 

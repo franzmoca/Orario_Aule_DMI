@@ -55,8 +55,9 @@
                 android:id="@+id/primo"
                 android:layout_below="@+id/aula"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#3578FF">
+                android:layout_height="45dp"
+                android:background="#00303E"
+                android:gravity="center_vertical">
 
                 <TextView android:layout_width="fill_parent"
                     android:text="Orario"
@@ -78,16 +79,6 @@
                     android:gravity="center"
                     android:textColor="#fff"/>
 
-                <TextView android:layout_width="fill_parent"
-                    android:text="Professore"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/prof1"
-                    android:textSize="14sp"
-                    android:layout_below="@id/ora1"
-                    android:layout_alignParentBottom="false"
-                    android:layout_marginRight="250dp"
-                    android:gravity="center"
-                    android:textColor="#fff"/>
             </RelativeLayout>
 
 
@@ -95,8 +86,9 @@
                 android:id="@+id/secondo"
                 android:layout_below="@+id/primo"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="#BCEAFF">
+                android:layout_height="40dp"
+                android:background="#7096AD"
+                android:gravity="center_vertical">
 
                 <TextView android:layout_width="fill_parent"
                     android:text="Orario"
@@ -116,22 +108,15 @@
                     android:layout_alignParentEnd="true"
                     android:gravity="center" />
 
-                <TextView android:layout_width="fill_parent"
-                    android:text="Professore"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/prof2"
-                    android:textSize="14sp"
-                    android:layout_below="@id/ora2"
-                    android:layout_alignParentBottom="false"
-                    android:layout_marginRight="250dp"
-                    android:gravity="center" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/terzo"
                 android:layout_below="@+id/secondo"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:background="#FFF9EF">
 
                 <TextView android:layout_width="fill_parent"
                     android:text="Orario"
@@ -151,23 +136,15 @@
                     android:layout_alignParentEnd="true"
                     android:gravity="center" />
 
-                <TextView android:layout_width="fill_parent"
-                    android:text="Professore"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/prof3"
-                    android:textSize="14sp"
-                    android:layout_below="@id/ora3"
-                    android:layout_alignParentBottom="false"
-                    android:layout_marginRight="250dp"
-                    android:gravity="center" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/quarto"
                 android:layout_below="@+id/terzo"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="#BCEAFF">
+                android:layout_height="40dp"
+                android:background="#7096AD"
+                android:gravity="center_vertical">
 
                 <TextView android:layout_width="fill_parent"
                     android:text="Orario"
@@ -187,22 +164,15 @@
                     android:layout_alignParentEnd="true"
                     android:gravity="center" />
 
-                <TextView android:layout_width="fill_parent"
-                    android:text="Professore"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/prof4"
-                    android:textSize="14sp"
-                    android:layout_below="@id/ora4"
-                    android:layout_alignParentBottom="false"
-                    android:layout_marginRight="250dp"
-                    android:gravity="center" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/quinto"
                 android:layout_below="@+id/quarto"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:background="#FFF9EF">
 
                 <TextView android:layout_width="fill_parent"
                     android:text="Orario"
@@ -222,24 +192,15 @@
                     android:layout_alignParentEnd="true"
                     android:gravity="center" />
 
-                <TextView android:layout_width="fill_parent"
-                    android:text="Professore"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/prof5"
-                    android:textSize="14sp"
-                    android:layout_below="@id/ora5"
-                    android:layout_alignParentBottom="false"
-                    android:layout_marginRight="250dp"
-                    android:gravity="center" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/sesto"
                 android:layout_below="@+id/quinto"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:background="#BCEAFF">
+                android:layout_height="40dp"
+                android:background="#7096AD"
+                android:gravity="center_vertical">
 
                 <TextView android:layout_width="fill_parent"
                     android:text="Orario"
@@ -259,22 +220,15 @@
                     android:layout_alignParentEnd="true"
                     android:gravity="center" />
 
-                <TextView android:layout_width="fill_parent"
-                    android:text="Professore"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/prof6"
-                    android:textSize="14sp"
-                    android:layout_below="@id/ora6"
-                    android:layout_alignParentBottom="false"
-                    android:layout_marginRight="250dp"
-                    android:gravity="center" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/settimo"
                 android:layout_below="@+id/sesto"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:background="#FFF9EF">
 
                 <TextView android:layout_width="fill_parent"
                     android:text="Orario"
@@ -294,23 +248,15 @@
                     android:layout_alignParentEnd="true"
                     android:gravity="center" />
 
-                <TextView android:layout_width="fill_parent"
-                    android:text="Professore"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/prof7"
-                    android:textSize="14sp"
-                    android:layout_below="@id/ora7"
-                    android:layout_alignParentBottom="false"
-                    android:layout_marginRight="250dp"
-                    android:gravity="center" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/ottavo"
                 android:layout_below="@+id/settimo"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="#BCEAFF">
+                android:layout_height="40dp"
+                android:background="#7096AD"
+                android:gravity="center_vertical">
 
                 <TextView android:layout_width="fill_parent"
                     android:text="Orario"
@@ -330,22 +276,15 @@
                     android:layout_alignParentEnd="true"
                     android:gravity="center" />
 
-                <TextView android:layout_width="fill_parent"
-                    android:text="Professore"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/prof8"
-                    android:textSize="14sp"
-                    android:layout_below="@id/ora8"
-                    android:layout_alignParentBottom="false"
-                    android:layout_marginRight="250dp"
-                    android:gravity="center" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/nono"
                 android:layout_below="@+id/ottavo"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:background="#FFF9EF">
 
                 <TextView android:layout_width="fill_parent"
                     android:text="Orario"
@@ -365,23 +304,15 @@
                     android:layout_alignParentEnd="true"
                     android:gravity="center" />
 
-                <TextView android:layout_width="fill_parent"
-                    android:text="Professore"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/prof9"
-                    android:textSize="14sp"
-                    android:layout_below="@id/ora9"
-                    android:layout_alignParentBottom="false"
-                    android:layout_marginRight="250dp"
-                    android:gravity="center" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/decimo"
                 android:layout_below="@+id/nono"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="#BCEAFF">
+                android:layout_height="40dp"
+                android:background="#7096AD"
+                android:gravity="center_vertical">
 
                 <TextView android:layout_width="fill_parent"
                     android:text="Orario"
@@ -401,15 +332,6 @@
                     android:layout_alignParentEnd="true"
                     android:gravity="center" />
 
-                <TextView android:layout_width="fill_parent"
-                    android:text="Professore"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/prof10"
-                    android:textSize="14sp"
-                    android:layout_below="@id/ora10"
-                    android:layout_alignParentBottom="false"
-                    android:layout_marginRight="250dp"
-                    android:gravity="center" />
             </RelativeLayout>
 
 
@@ -417,8 +339,9 @@
                 android:id="@+id/undicesimo"
                 android:layout_below="@+id/decimo"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center">
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:background="#FFF9EF">
 
                 <TextView android:layout_width="fill_parent"
                     android:text="Orario"
@@ -438,15 +361,6 @@
                     android:layout_alignParentEnd="true"
                     android:gravity="center" />
 
-                <TextView android:layout_width="fill_parent"
-                    android:text="Professore"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/prof11"
-                    android:textSize="14sp"
-                    android:layout_below="@id/ora11"
-                    android:layout_alignParentBottom="false"
-                    android:layout_marginRight="250dp"
-                    android:gravity="center" />
             </RelativeLayout>
 
 

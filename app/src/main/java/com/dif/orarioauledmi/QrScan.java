@@ -69,5 +69,10 @@ public class QrScan extends Activity {
 
     }
 
+    public void calendario (View view){
+        Intent intent = new Intent (QrScan.this, Calendario.class);
+        QrScan.this.startActivity(intent);
+    }
+
 }
 

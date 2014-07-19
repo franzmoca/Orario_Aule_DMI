@@ -13,8 +13,10 @@
         android:id="@+id/spinner_aula"
         android:gravity="center_horizontal"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="5dp"
-        android:layout_toLeftOf="@+id/imageView2" />
+        android:layout_alignRight="@+id/button"
+        android:layout_alignEnd="@+id/button"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button" />
 
     <Spinner
         android:layout_width="wrap_content"
@@ -22,9 +24,10 @@
         android:id="@+id/spinner_giorno"
         android:gravity="center_horizontal"
         android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/imageView2"
-        android:layout_alignStart="@+id/imageView2"
-        android:layout_marginLeft="25dp" />
+        android:layout_alignLeft="@+id/spinner_aula"
+        android:layout_alignStart="@+id/spinner_aula"
+        android:layout_alignRight="@+id/spinner_aula"
+        android:layout_alignEnd="@+id/spinner_aula" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,12 +36,9 @@
         android:text="Aula"
         android:id="@+id/textView"
         android:textColor="#BC4331"
-        android:layout_marginTop="42dp"
         android:textSize="25dp"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="22dp" />
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,8 +48,8 @@
         android:id="@+id/textView2"
         android:textColor="#BC4331"
         android:textSize="25dp"
-        android:layout_alignTop="@+id/textView"
-        android:layout_toRightOf="@+id/button" />
+        android:layout_below="@+id/spinner_aula"
+        android:layout_toRightOf="@+id/imageView" />
 
     <Button
         android:layout_width="wrap_content"
@@ -58,9 +58,9 @@
         android:id="@+id/button"
         android:onClick="apriOrario"
         android:textColor="#fff"
-        android:layout_marginTop="68dp"
-        android:layout_below="@+id/spinner_aula"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="114dp" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -81,4 +81,18 @@
         android:layout_alignBottom="@+id/imageView"
         android:layout_marginLeft="85dp"
         android:layout_toRightOf="@+id/imageView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/ingresso2"
+        android:layout_alignRight="@+id/imageView2"
+        android:layout_alignEnd="@+id/imageView2"
+        android:layout_marginTop="50dp"
+        android:adjustViewBounds="false"
+        android:layout_alignTop="@+id/button" />
 </RelativeLayout>

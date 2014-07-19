@@ -44,7 +44,7 @@ public class Calendario extends Activity {
         setContentView(R.layout.activity_calendario);
         setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); //Forza la portrait mode
         Spinner spinner = (Spinner) findViewById(R.id.spinner_aula);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, aule_array);
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.simple_spinner_item,aule_array);
         adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 

@@ -14,7 +14,7 @@
         android:gravity="center_horizontal"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="5dp" />
 
     <Spinner
         android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
         android:gravity="center_horizontal"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="5dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
         android:layout_marginTop="44dp"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:textSize="30dp" />
+        android:textSize="25dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
         android:layout_centerHorizontal="true"
         android:textColor="#BC4331"
         android:layout_marginTop="20dp"
-        android:textSize="30dp" />
+        android:textSize="25dp" />
 
     <Button
         android:layout_width="wrap_content"

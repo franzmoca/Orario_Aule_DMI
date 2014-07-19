@@ -11,17 +11,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spinner_aula"
+        android:gravity="center_horizontal"
         android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spinner_giorno"
+        android:gravity="center_horizontal"
         android:layout_below="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,9 +31,11 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Aula"
         android:id="@+id/textView"
-        android:layout_alignParentTop="true"
+        android:textColor="#BC4331"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp" />
+        android:textSize="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,7 +44,10 @@
         android:text="Giorno"
         android:id="@+id/textView2"
         android:layout_below="@+id/spinner_aula"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#BC4331"
+        android:layout_marginTop="20dp"
+        android:textSize="30dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -49,5 +56,26 @@
         android:id="@+id/button"
         android:layout_below="@+id/spinner_giorno"
         android:layout_centerHorizontal="true"
-        android:onClick="apriOrario" />
+        android:onClick="apriOrario"
+        android:layout_marginTop="40dp"
+        android:textColor="#fff" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/unipg"
+        android:layout_alignParentLeft="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/slide_home2"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/textView"
+        android:layout_toRightOf="@+id/textView2" />
 </RelativeLayout>

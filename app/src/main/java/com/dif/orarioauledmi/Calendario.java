@@ -39,8 +39,6 @@ public class Calendario extends Activity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-
         setContentView(R.layout.activity_calendario);
         setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); //Forza la portrait mode
         Spinner spinner = (Spinner) findViewById(R.id.spinner_aula);

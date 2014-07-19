@@ -38,6 +38,8 @@ public class Orario extends Activity {
     //int idprof[] = {R.id.prof1, R.id.prof2, R.id.prof3, R.id.prof4, R.id.prof5, R.id.prof6, R.id.prof7, R.id.prof8, R.id.prof9, R.id.prof10, R.id.prof11};
     int idRelative[] = {R.id.primo,R.id.secondo,R.id.terzo,R.id.quarto,R.id.quinto,R.id.sesto,R.id.settimo,R.id.ottavo,R.id.nono,R.id.decimo,R.id.undicesimo};
     String orari[] = {"9-10","10-11","11-12","12-13","14-15","15-16","16-17","17-18"};
+    public final static String GIORNO = "com.dif.orarioauledmi.giorno";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +63,9 @@ public class Orario extends Activity {
         aula = (TextView) findViewById(R.id.aula);
         Intent intent = getIntent();
         String query = intent.getStringExtra(QrScan.QRCODE);
-        String d ="http://esameingsoft.altervista.org/php/android/echo_json.php?q="+ query.replaceAll(" ","%20");
+        String giorno = intent.getStringExtra(GIORNO);
+
+        String d ="http://esameingsoft.altervista.org/php/android/echo_json.php?q="+ query.replaceAll(" ","%20")+"&d="+giorno;
         Log.d("d",""+d);
 
         JSONObject json = getJSONFromHttpPost(d);

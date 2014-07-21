@@ -257,7 +257,7 @@ public class Orario extends Activity {
             return R.drawable.labgiallo;
         }
         if(aula.contains("lab VERDE")){
-            return R.drawable.ingresso;
+            return R.drawable.labverde;
         }
         return R.drawable.ingresso;
     }

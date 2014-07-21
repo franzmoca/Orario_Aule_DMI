@@ -35,6 +35,7 @@ import java.util.List;
 public class Calendario extends Activity {
     public final static String QRCODE = "com.dif.orarioauledmi.qrcode";
     public final static String GIORNO = "com.dif.orarioauledmi.giorno";
+    public final static String ORASTART = "com.dif.orarioauledmi.start";
 
 
     @Override
@@ -138,7 +139,7 @@ public class Calendario extends Activity {
                 break;
         }
         qrcode.putExtra(GIORNO,""+d);
-
+        qrcode.putExtra(ORASTART,true);
         Calendario.this.startActivity(qrcode);
 
     }

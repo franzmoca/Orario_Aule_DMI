@@ -46,11 +46,16 @@ public class Orario extends Activity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); //Forza la portrait mode
         setContentView(R.layout.activity_orario);
         Calendar rightNow = Calendar.getInstance();
+        Intent intent = getIntent();
+
+        String query = intent.getStringExtra(QrScan.QRCODE);
+        String giorno = intent.getStringExtra(GIORNO);
+        Boolean start = intent.getBooleanExtra(Calendario.ORASTART,true);
         int iora = rightNow.get(Calendar.HOUR_OF_DAY);
         Log.d("ioraprima: ",""+iora);
 
         //Orari
-        if(iora > 8 && iora < 19) {
+        if(iora > 8 && iora < 19 && !start) {
             if(iora>13){
                 iora-=10;
             }else {
@@ -61,9 +66,7 @@ public class Orario extends Activity {
         }
         Log.d("ioradopo: ",""+iora);
         aula = (TextView) findViewById(R.id.aula);
-        Intent intent = getIntent();
-        String query = intent.getStringExtra(QrScan.QRCODE);
-        String giorno = intent.getStringExtra(GIORNO);
+
 
         String d ="http://esameingsoft.altervista.org/php/android/echo_json.php?q="+ query.replaceAll(" ","%20")+"&d="+giorno;
         Log.d("d",""+d);

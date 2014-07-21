@@ -27,6 +27,7 @@ public class QrScan extends Activity {
                Intent qrcode = new Intent(QrScan.this,Orario.class);
                qrcode.putExtra(QRCODE,scanResult.getContents());
                qrcode.putExtra(Calendario.GIORNO,10);
+               qrcode.putExtra(Calendario.ORASTART,false);
 
                QrScan.this.startActivity(qrcode);
                }
